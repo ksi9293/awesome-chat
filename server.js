@@ -1,6 +1,6 @@
 const http = require('http');
 
-const hostname = '13.124.189.126';
+const hostname = 'ec2-13-124-189-126.ap-northeast-2.compute.amazonaws.com';
 const port = 80;
 
 
