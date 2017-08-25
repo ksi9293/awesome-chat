@@ -1,0 +1,26 @@
+{
+  "name": "awesome_chat",
+  "version": "1.0.0",
+  "description": "init",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksi9293/awesome-chat.git"
+  },
+  "keywords": [
+    "awesome_api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksi9293/awesome-chat/issues"
+  },
+  "homepage": "https://github.com/ksi9293/awesome-chat#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
