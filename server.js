@@ -1,12 +1,26 @@
-const http = require('http');
+var express = require('express');
+var app = express();
 
-const hostname = 'ec2-13-124-189-126.ap-northeast-2.compute.amazonaws.com';
-const port = 80;
+app.set('views', `./views`);
+app.set(`view engine`, `jade`);
 
 
-http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain'});
-    res.end('Hello World\n');
-}).listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+app.locals.pretty = true;
+
+app.listen(80, function()
+{
+    console.log(`Connected, 80 port!`);
+});
+
+app.get(`/topic/new`,function(req, res){
+    res.render(`new`);
+});
+
+app.post(`/topic`, function(req, res){
+    var args = [];
+    args = req.accepts();
+    for(var i = 0; i < args.length; i++)
+        {
+        res.send(`HI ${args[i]} POST`);    
+        }
 });
