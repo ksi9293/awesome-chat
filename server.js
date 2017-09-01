@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+var router = express.Router();
+
 
 app.set('views', `./views`);
 app.set(`view engine`, `jade`);
@@ -16,7 +18,7 @@ app.get(`/topic/new`,function(req, res){
     res.render(`new`);
 });
 
-app.post(`/topic`, function(req, res){
+app.post(`/`, function(req, res){
     var args = [];
     args = req.accepts();
     for(var i = 0; i < args.length; i++)
